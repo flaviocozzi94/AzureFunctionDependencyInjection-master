@@ -18,7 +18,7 @@ namespace AzureFunctionDependencyInjection
         [FunctionName("MessageFunction")]
         public void Run([TimerTrigger("*/15 * * * * *")] TimerInfo myTimer)
         {
-            _logger.LogInformation(_messageResponderService.GetPositiveMessage());
+            _logger.LogWarning(_messageResponderService.GetPositiveMessage());
             //_logger.Debug("positive function");
             //new OkObjectResult(_messageResponderService.GetPositiveMessage());
         }
