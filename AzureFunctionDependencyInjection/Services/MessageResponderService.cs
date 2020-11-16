@@ -7,25 +7,25 @@ namespace AzureFunctionDependencyInjection.Services
     public class MessageResponderService : IMessageResponderService
     {
         //private MessageResponderConfiguration _messageResponderConfiguration;
-        private ILogger<MessageResponderService> _logger;
+        //private ILogger<MessageResponderService> _logger;
 
         //public MessageResponderService(IOptions<MessageResponderConfiguration> messageResponderConfiguration, ILogger<MessageResponderService> logger)
-        public MessageResponderService(ILogger<MessageResponderService> logger)
+        public MessageResponderService()
         {
             //_messageResponderConfiguration = messageResponderConfiguration.Value;
-            _logger = logger;
+            //_logger = logger;
         }
 
         public string GetPositiveMessage()
         {
-            _logger.LogInformation("Very Positive!");
+            //_logger.LogInformation("Very Positive!");
             return "positivo";
             //return _messageResponderConfiguration.PositiveResponseMessage;
         }
 
         public string GetNegativeMessage()
         {
-            _logger.LogInformation("Very negative!");
+            //_logger.LogInformation("Very negative!");
             //return _messageResponderConfiguration.NegativeResponseMessage;
             return "negativo";
 
